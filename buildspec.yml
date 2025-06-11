@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Building the website..."
+      - ls -la
+  
+  post_build:
+    commands:
+      - echo "Deploying to S3..."
+      - aws s3 sync . s3://avery-codebuild-test --delete --exclude ".git/*" --exclude "buildspec.yml"
+
+artifacts:
+  files:
+    - '**/*'
