@@ -9,7 +9,7 @@ phases:
   post_build:
     commands:
       - echo "Deploying to S3..."
-      - aws s3 sync . s3://avery-codebuild-test --delete --exclude ".git/*" --exclude "buildspec.yml"
+      - aws s3 sync . s3://avery-codebuild-demo --delete --exclude ".git/*" --exclude "buildspec.yml"
 
 artifacts:
   files:
