@@ -2,4 +2,4 @@ Test project for codebuild
 - beta
 - gamma
 - alpha
-- test-account-id
+- test-account-id-2
